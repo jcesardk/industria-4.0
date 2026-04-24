@@ -1,0 +1,29 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" routerLink="/" (click)="close()">
+      <span class="brand-mark">4.0</span>
+      <span class="brand-text">Indústria&nbsp;4.0</span>
+    </a>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      [attr.aria-expanded]="menuOpen()"
+      aria-label="Abrir menu"
+      (click)="toggle()"
+    >
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" [class.open]="menuOpen()">
+      @for (item of navItems; track item.path) {
+        <a
+          [routerLink]="item.path"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+          (click)="close()"
+        >{{ item.label }}</a>
+      }
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,59 @@
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="tag">Análise e Desenvolvimento de Sistemas · Banco de Dados</span>
+    <h1>
+      Indústria&nbsp;4.0: o <span class="grad">futuro das profissões</span>
+      em ADS e Banco de Dados
+    </h1>
+    <p class="lead">
+      Inteligência artificial, automação, IoT e análise de dados estão transformando
+      rapidamente o mercado de trabalho — redesenhando profissões tradicionais,
+      criando novas carreiras e exigindo competências digitais que antes não
+      eram necessárias.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" routerLink="/profissoes">Conhecer as profissões</a>
+      <a class="btn btn-ghost" routerLink="/mercado">Impactos no mercado</a>
+    </div>
+
+    <ul class="stats" aria-label="Indicadores de contexto">
+      <li><strong>6</strong><span>pilares tecnológicos</span></li>
+      <li><strong>+6</strong><span>profissões em alta</span></li>
+      <li><strong>4.0</strong><span>nova revolução industrial</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <app-section-title
+      eyebrow="Pilares"
+      title="Tecnologias que movem a 4ª revolução industrial"
+      subtitle="Base técnica que sustenta as novas profissões e soluções do mercado."
+    />
+    <div class="grid">
+      @for (p of pillars; track p.title) {
+        <app-card [icon]="p.icon" [title]="p.title" [description]="p.description" />
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <app-section-title
+      eyebrow="Impacto"
+      title="O futuro das profissões já começou"
+      subtitle="Profissionais qualificados buscam competências digitais enquanto atividades repetitivas são substituídas por sistemas automatizados."
+    />
+    <div class="grid">
+      @for (m of impacts; track m.title) {
+        <app-card [icon]="m.icon" [title]="m.title" [description]="m.description" />
+      }
+    </div>
+    <div class="cta center">
+      <a class="btn btn-primary" routerLink="/mercado">Explorar mercado, habilidades e legislação →</a>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,61 @@
+<section class="section">
+  <div class="container">
+    <app-section-title
+      eyebrow="Mercado de trabalho"
+      title="A transformação acelerada das profissões"
+      subtitle="Inteligência artificial, automação, IoT e análise de dados estão redesenhando carreiras, exigindo novas competências e criando oportunidades inéditas."
+    />
+
+    <div class="grid-cards">
+      @for (m of impacts; track m.title) {
+        <app-card [icon]="m.icon" [title]="m.title" [description]="m.description" />
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <app-section-title
+      eyebrow="Competências"
+      title="Habilidades digitais que o mercado exige"
+      subtitle="A requalificação contínua deixou de ser diferencial — é pré-requisito para quem atua com tecnologia."
+    />
+
+    <div class="skills-groups">
+      @for (cat of categories; track cat) {
+        <div class="skills-group">
+          <h3>{{ cat }}</h3>
+          <ul>
+            @for (s of skillsByCategory(cat); track s.name) {
+              <li>
+                <strong>{{ s.name }}</strong>
+                <span>{{ s.description }}</span>
+              </li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <app-section-title
+      eyebrow="Ética, Segurança e Legislação"
+      title="Responsabilidade no uso da tecnologia"
+      subtitle="Legislações e normas asseguram que inovação e proteção caminhem juntas, garantindo privacidade, transparência e ética nos dados."
+    />
+
+    <div class="legal-grid">
+      @for (l of legal; track l.title) {
+        <article class="legal-card">
+          <span class="ref">{{ l.reference }}</span>
+          <h3>{{ l.title }}</h3>
+          <p>{{ l.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

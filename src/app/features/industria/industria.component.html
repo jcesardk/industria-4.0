@@ -1,0 +1,47 @@
+<section class="section">
+  <div class="container">
+    <app-section-title
+      eyebrow="Contexto"
+      title="O que é a Indústria 4.0"
+      subtitle="A convergência entre mundo físico, digital e biológico redefine produção, serviços e profissões."
+    />
+
+    <div class="prose">
+      <p>
+        A <strong>Indústria 4.0</strong> é a quarta revolução industrial, marcada pela
+        integração de tecnologias como IoT, IA, Big Data, computação em nuvem,
+        automação e cibersegurança. Diferente das revoluções anteriores, seu
+        combustível principal são os <strong>dados</strong> — coletados, processados e
+        transformados em decisões em tempo real.
+      </p>
+      <p>
+        Essa transformação está <strong>redesenhando o mercado de trabalho</strong>
+        em ritmo acelerado. Profissões tradicionais se adaptam, atividades repetitivas
+        são automatizadas e novas carreiras surgem exigindo competências digitais
+        que antes não existiam. Profissionais qualificados correm para se requalificar
+        em programação, dados, cloud e IA.
+      </p>
+      <p>
+        Para quem atua em <strong>Análise e Desenvolvimento de Sistemas</strong> e
+        <strong>Banco de Dados</strong>, esse cenário amplia responsabilidades: já não
+        basta entregar software funcional; é preciso construir soluções
+        <em>éticas, seguras, escaláveis e eficientes</em>, integradas a ecossistemas
+        complexos de IA, nuvem e dispositivos conectados.
+      </p>
+      <p>
+        Com o poder crescente da tecnologia, cresce também a importância de
+        <strong>legislações que garantam segurança, ética e proteção de dados</strong>.
+        LGPD, Marco Civil da Internet, regulamentações de IA (PL 2338/2023, EU AI Act)
+        e normas como ISO 27001 passam a integrar o dia a dia do profissional de TI.
+        Construir tecnologia responsável é tão importante quanto construir tecnologia
+        eficiente.
+      </p>
+    </div>
+
+    <div class="grid">
+      @for (p of pillars; track p.title) {
+        <app-card [icon]="p.icon" [title]="p.title" [description]="p.description" />
+      }
+    </div>
+  </div>
+</section>
