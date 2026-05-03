@@ -1,0 +1,16 @@
+services:
+  app:
+    container_name: industria-4-0-app
+    build: .
+    restart: unless-stopped
+    expose:
+      - 80
+    environment:
+      - VIRTUAL_HOST=industria40.jcssh.cloud
+      - LETSENCRYPT_HOST=industria40.jcssh.cloud
+    networks:
+      - npm-network
+
+networks:
+  npm-network:
+    external: true
